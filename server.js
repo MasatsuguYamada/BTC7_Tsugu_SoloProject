@@ -5,6 +5,7 @@ function setupServer() {
   const app = express();
 
   app.use("/", express.static("frontend/dist"));
+  app.use(cors());
   app.use(express.json());
 
   app.get("/api/hello", (req, res) => {

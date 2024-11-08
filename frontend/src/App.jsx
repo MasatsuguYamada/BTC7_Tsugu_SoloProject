@@ -7,11 +7,11 @@ function App() {
   const [count, setCount] = useState(0);
   const [title, setTitle] = useState("Tsugu");
 
-  async function getTitle() {
+  const getTitle = async () => {
     let response = await fetch("/api/hello");
     response = await response.json();
     setTitle(response.title);
-  }
+  };
 
   return (
     <>
