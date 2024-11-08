@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 
 function setupServer() {
   const app = express();
