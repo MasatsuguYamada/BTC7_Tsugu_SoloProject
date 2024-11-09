@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const db = require("./database/src/knex")
 
 function setupServer() {
   const app = express();
@@ -7,6 +8,9 @@ function setupServer() {
   app.use("/", express.static("frontend/dist"));
   app.use(cors());
   app.use(express.json());
+
+
+
 
   app.get("/api/hello", (req, res) => {
     res.json({ title: "TsuguTsugu" });
